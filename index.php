@@ -7,6 +7,8 @@
     <title>Registro de Pedidos 1.0</title>
 </head>
 <body>
+    <?php require_once "login.php" ?>
+
     <h2>Efetue o login</h2>
     <form action="login.php" method="POST" id="form-login">
         <label for="email">E-mail:</label>
@@ -15,5 +17,6 @@
         <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
         <input type="submit" id="submeter" value="Entrar">
     </form>
+    <?php procurarUsuario($qtd_usuarios) ?>
 </body>
 </html>
