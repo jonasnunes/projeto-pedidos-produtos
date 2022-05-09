@@ -26,7 +26,7 @@
         
         if(empty($qtd_usuarios)){
             $action = "index.php";
-            echo "<p style='color:red;'>Usuário <strong>NÃO</strong> encontrado!</p>";
+            echo "<p>Usuário <strong>NÃO</strong> encontrado!</p>";
         } else{
             $action = "login.php";
         }
