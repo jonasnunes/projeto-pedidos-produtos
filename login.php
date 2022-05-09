@@ -1,8 +1,8 @@
 <?php
 
     // pegar os valores do formulário
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
+    $email = $_POST["email"] ?? !empty($email);
+    $senha = $_POST["senha"] ?? !empty($senha);
 
     // fazer a conexão com o banco de dados
     $servername = "localhost";
@@ -23,15 +23,14 @@
 
         $result = $query->fetchAll();
         $qtd_usuarios = count($result);
-
-        function procurarUsuario($qtd_usuarios){
-            if($qtd_usuarios == 1){
-                echo "<p>Usuário encontrado!</p>";
-            } else if($qtd_usuarios == 0){
-                echo "<p>Usuário <strong>NÃO</strong> encontrado!</p>";
-            }
+        
+        if(empty($qtd_usuarios)){
+            $action = "index.php";
+            echo "<p style='color:red;'>Usuário <strong>NÃO</strong> encontrado!</p>";
+        } else{
+            $action = "login.php";
         }
-
+        
     }
     catch(PDOException $e){
         echo "Connection failed: " . $e->getMessage();

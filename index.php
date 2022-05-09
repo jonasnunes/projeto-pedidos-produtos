@@ -10,13 +10,13 @@
     <?php require_once "login.php" ?>
 
     <h2>Efetue o login</h2>
-    <form action="login.php" method="POST" id="form-login">
+    <form action="<?=$action?>" method="POST" id="form-login">
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
         <label for="senha">Senha: </label>
         <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
         <input type="submit" id="submeter" value="Entrar">
     </form>
-    <?php procurarUsuario($qtd_usuarios) ?>
+    
 </body>
 </html>
