@@ -19,7 +19,7 @@
         <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
         <label for="senha">Senha: </label>
         <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
-        <input type="submit" id="submeter" value="Entrar">
+        <input type="submit" id="submeter" value="Entrar" class="btn btn-primary">
     </form>
     
     <!-- JavaScript Bundle with Popper -->
